@@ -1,4 +1,4 @@
-'use client';
+gt'use client';
 
 import { useState, useCallback, useRef, useEffect } from 'react';
 
@@ -197,6 +197,15 @@ export default function Home() {
 
   /* ── download ── */
   const download = async () => {
+    if (/Android|iPhone/i.test(navigator.userAgent)) {
+  const link = document.createElement('a');
+  link.href = enhancedUrl;
+  link.download = 'enhanced-image.jpg';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  return;
+    }
     if (!enhancedUrl) return;
     try {
       const res  = await fetch(enhancedUrl);
