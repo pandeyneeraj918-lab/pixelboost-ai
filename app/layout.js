@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Transform blurry, low-quality images into stunning 4K clarity using AI. Free forever.',
 
   verification: {
-    google: "PASTE_YOUR_GOOGLE_CODE_HERE",
+    google: "ldEWAdEqwD1bimol0MFEYifok06RwBtGH-xIqQeRnFQ",
   },
 }
 
